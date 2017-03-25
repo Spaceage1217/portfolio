@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <title>My New Pen!</title>
+
+  <!--  Styles  -->
+  <link rel="stylesheet" href="styles/index.processed.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <header class="heading">
+    <h1 class="heading-logo">D/F</h1>
+    <h4 class="heading-subtext">Frontend Developer</h4>
+
+
+     <input id="menu" type="checkbox" />
+     <label for="menu" class="mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></label>
+     <label for="menu" class="mobile-menu_exit"><i class="fa fa-times" aria-hidden="true"></i></label>
+
+
+    <ul class="heading-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <ul class="heading-menu heading-menu_social">
+      <li><a href="#"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i>
+</a></li>
+      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    </ul>
+  </header>
+  <main>
+    <div class="wrapper">
+      <div id="about" class="about_me">
+        <h1>About Me</h1>
+        <p>
+          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugiat voluptates rem nobis quo nesciunt incidunt repudiandae fuga nulla. Id sit mollitia nobis tenetur, nihil quidem, odio expedita nulla in.</span>
+          <span>Similique est natus harum ipsum ut esse eaque error temporibus ab quod. Suscipit, eum illo omnis. Aut vel, repellat, iste ipsa molestiae doloremque explicabo, ipsum maiores animi repudiandae minus. Explicabo?</span>
+          <span>Voluptatem quae neque, corporis illo voluptatum sit autem placeat, laboriosam perspiciatis ea doloribus provident ut. Excepturi quos, magni officia, cupiditate quibusdam deleniti blanditiis est sunt, fugit sequi ea, odio. Officia!</span>
+          <br />
+          <br />
+          <h1><hr /></h1>
+          <ul class="skills">
+            <li><i class="devicon-html5-plain"></i></li>
+            <li><i class="devicon-css3-plain"></i></li>
+            <li><i class="devicon-javascript-plain"></i></li>
+            <li><i class="devicon-gulp-plain"></i></li>
+            <li><i class="devicon-nodejs-plain"></i></li>
+            <li><i class="devicon-cplusplus-plain"></i></li>
+          </ul>
+
+
+          <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident animi dignissimos nam id inventore, distinctio iste, asperiores, nihil qui quo, a aliquam quae commodi necessitatibus mollitia neque rerum veniam perspiciatis.</span><span>Illo ut nihil, placeat excepturi distinctio ratione id repudiandae maxime sequi itaque dolore, ea porro nostrum fuga ipsam consequatur, quis! Aut labore aspernatur quo fugit adipisci voluptate consequuntur dolores non.</span></p>
+
+        </p>
+      </div>
+      <div  id="projects" class="projects clearfix">
+        <div class="projects-title half half-1">
+
+          <h1 class="projects-title_large">Projects</h1><!--will only show on large screens for layout purposes-->
+          <div class="submit">
+            <div class="reveal">
+              <label class="send" for="send">
+        <a href="#">View More</a>
+           <p>|!|!|</p><!--purly for animation effects to mimmick blur lines-->
+         <span class="plane"><i class="fa fa-folder-open-o" aria-hidden="true"></i></span>
+     </label>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="projects-card half half-2">
+          <div class="wrapper-2">
+            <div class="header">
+              <div class="date">
+                <span class="day">3</span>
+                <span class="month">March</span>
+                <span class="year">2017</span>
+              </div>
+            </div>
+            <div class="data">
+              <div class="content">
+                <span class="author">Dimeji Faluyi</span>
+                <h1 class="title">To Do List</h1>
+                <ul class="tags">
+                  <li><i class="devicon-html5-plain"></i></li>
+                  <li><i class="devicon-css3-plain"></i></li>
+                  <li><i class="devicon-javascript-plain"></i></li>
+                  <li><i class="devicon-angularjs-plain"></i></li>
+                </ul>
+                <p class="text">A simple to do list built with html, css, and Angular 2</p>
+                <a href="#" class="button">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+         <h1 class="projects-title_small">Projects</h1><!--will only show on small screens for layout purposes-->
+
+
+
+
+      </div>
+      <div  id="contact" class="contact clearfix">
+        <h1 class="contact-title">Contact Me</h1>
+        <div class="half half-1">
+          <label class="name" for="name">NAME</label>
+          <input name="name" type="text" placeholder="" />
+          <label for="email">Email</label>
+          <input name="email" type="email" placeholder="" /></div>
+
+        <div class="half half-2">
+          <label for="message">Message</label>
+          <textarea name="message" id="" cols="10" rows="10" placeholder="Whats up?"></textarea>
+          <div class="submit">
+            <div class="reveal">
+              <label class="send" for="send">
+        <a href="#">SEND</a>
+                <p>|!|!|</p><!--purly for animation effects to mimmick blur lines-->
+         <span class="plane"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></span>
+     </label>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer id="footer">
+    <div class="wrapper">
+      <h5>Created by Dimeji Faluyi</h5>
+      <ul class="heading-menu heading-menu_social">
+        <li><a href="#"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i>
+</a></li>
+        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>
