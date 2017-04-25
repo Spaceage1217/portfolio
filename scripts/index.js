@@ -23,6 +23,10 @@ $(function() {
   window.location = $(this).find("a").attr("href"); 
   return false;
 });
+   $(".myBox-2").click(function() {
+  window.location = $(this).find("a").attr("href"); 
+  return false;
+});
   
 });
 
