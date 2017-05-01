@@ -1,15 +1,28 @@
-/**
+ /**
  * index.scss
  * - Add any styles you want here!
  */
+//global
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+$red:#ef6461;
+$yellow:#e4b363;
+$grey:#e8e9eb;
+$white:#e0dfd5;
+$black:#313638;
+$black-2:#1B1B1B;
+$black-3:#2E2F2F;
+$rich-black: #010203;
+$black-black:#000000;
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif !important;
+ 
+overflow-x: hidden; 
+ font-family: 'Roboto', sans-serif !important;
+ // font-family: 'Playfair Display', serif !important;
+ // font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 
@@ -22,547 +35,564 @@ body {
    // overflow-x: hidden; 
 }*/
 
-p {
+p{
   font-size: 1.2sem;
 }
-
-html {
+html{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   height: 0;
 }
-
-.wrapper {
+.wrapper{
   width: 1000px;
   max-width: 100%;
   margin: 0 auto;
+  
 }
-
-a:hover {
+a:hover{
   text-decoration: none !important;
 }
-
-ul {
+ul{
   padding: 0;
 }
-
-li {
-  list-style: none;
+li{
+ list-style: none;
   padding: 0;
 }
-
-#menu {
-  display: none;
+#menu{
+  display: none;//hides the toggle for mobile menu
 }
 
-.reveal {
-  margin-top: 2em;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  background: #ef6461;
-  height: 3em;
-  position: relative;
-  width: 10em;
-  overflow: hidden;
-}
+//button---------------------------------------------------------------------
+    .reveal{
+     margin-top: 2em;
+     cursor: pointer;
+     text-align: center;
+     display:inline-block;
+     background: $red;
+     height: 3em;
+     position: relative;
+     width: 10em;
+     overflow: hidden;
+       p{
+         color: white;
+       }
+      &:hover{
+        .send{
+            transition: .25s;
+            transform: translateY(-110px);
+        }
+       }
+    }
+  .send{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: -0px;
+    font-weight: 500;
+    font-size: 1.3em;
+    background: $red;
+    width: 5em;
+    height: 110px;
+    padding-top: .3em;
+    text-align: center;
+    input{
+      background: none;
+      border: 0 !important;
+      text-transform: uppercase;
+    }
+    input,a{
+      color: white;
+      display: block;
+      margin-bottom: 30px;
+    }
+    .plane{
+      display: block;
+      i{color: white;}
+    }
+    
+  }
 
-.reveal p {
-  color: white;
-}
-
-.reveal:hover .send {
-  transition: .25s;
-  transform: translateY(-110px);
-}
-
-.send {
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: -0px;
-  font-weight: 500;
-  font-size: 1.3em;
-  background: #ef6461;
-  width: 5em;
-  height: 110px;
-  padding-top: .3em;
-  text-align: center;
-}
-
-.send a {
-  color: white;
-  display: block;
-  margin-bottom: 30px;
-}
-
-.send .plane {
-  display: block;
-}
-
-.send .plane i {
-  color: white;
-}
-
-.heading {
+//header---------------------------------------------------------------------
+.heading{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000000;
-  background:url("http://i.imgur.com/SFQWaSY.jpg");
-  background-position: top; 
-  background-size: cover;
+  background: $black-black;
+ background: url( "http://i.imgur.com/SFQWaSY.jpg");
+ 
+//background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+ //background:url("http://i63.tinypic.com/ixtkso.jpg" ) ; 
+  background-size: cover ;
+  .mobile-menu , .mobile-menu_exit{
+    display: none;
+    i{
+      color: white;
+      font-size: 2.5em;
+    }
+  }
+  &-logo{
+    color: white;
+    font-size: 10em;
+    font-weight: 900;
+    font-style: italic;
+  }
+  &-subtext{
+    color: $red;
+  }
+  
+  &-menu{
+    display: flex;
+   justify-content: center;
+    li{
+      margin: 1em;
+      a{
+        font-size: 2em;
+        transition: .5s;
+        color: white;
+        &:hover{
+          color: $red;
+        }
+       
+      }
+    }
+  }
 }
 
-.heading .mobile-menu,
-.heading .mobile-menu_exit {
-  display: none;
-}
 
-.heading .mobile-menu i,
-.heading .mobile-menu_exit i {
-  color: white;
-  font-size: 2.5em;
-}
+//About me-------------------------------------------------------------------
 
-.heading-logo {
-  color: white;
-  font-size: 10em;
-  font-weight: 900;
-  font-style: italic;
-}
-
-.heading-subtext {
-  color: #ef6461;
-}
-
-.heading-menu {
-  display: flex;
-  justify-content: center;
-}
-
-.heading-menu li {
-  margin: 1em;
-}
-
-.heading-menu li a {
-  font-size: 2em;
-  transition: .5s;
-  color: white;
-}
-
-.heading-menu li a:hover {
-  color: #ef6461;
-}
-
-.about_me {
+.about_me{
+  h1{
+      font-weight: 900;
+    
+    
+  }
   margin-top: 5em;
   padding: 2em;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #e8e9eb;
-  color: #1B1B1B;
+  background: rgba(white,.9);
+border: 1px solid $grey;
+  color: $black-2;
   text-align: center;
+  .skills{
+    display: flex;
+    justify-content: center;
+      padding: 0;
+      margin: 0;
+     color: $red;
+     text-shadow: 0px 5px 20px rgba($black-black,.3);
+    li{
+      font-size: 2.5em;
+      margin: 1em;
+     
+    }
+  }
 }
 
-.about_me h1 {
-  font-weight: 900;
-}
 
-.about_me .skills {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  color: #ef6461;
-  text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.about_me .skills li {
-  font-size: 2.5em;
-  margin: 1em;
-}
-
-.half {
-  border: 1px solid #000000;
+//projects--------------------------------------------------------------------
+.half{
+  border: 1px solid $black-black;
   border-radius: 5px;
   float: left;
   width: 49%;
-}
-
-.half-1 {
-  margin-right: 1%;
-  border: none;
-}
-
-.half-2 {
-  margin-left: 1%;
-}
-
-.wrapper-2 {
-  padding: 2em;
-  position: relative;
-  overflow: hidden;
-}
-
-.wrapper-2:hover .data {
-  transition: .2s;
-  transform: translateY(-200px);
-}
-
-.projects {
-  margin: 3em 0em;
-}
-
-.projects-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects-title h1 {
-  font-size: 4em;
-  font-weight: 900;
-}
-
-.projects-title_small {
-  display: none;
-}
-
-.projects-card {
-  background: #313638;
-  background-image: url("https://ucarecdn.com/0272b1b6-cf51-4bfe-a1a8-c8098cbe8831/pattern.png");
-  color: white;
-  background-size: cover;
-  transition: .5s;
-  height: 400px;
-}
-
-.projects-card a {
-  color: white;
-}
-
-.projects-card .header {
-  position: absolute;
-  top: 0;
-  margin-top: 20px;
-}
-
-.projects-card .data {
-  position: relative;
-  top: 250px;
-  height: 330px;
-}
-
-.projects-card .data .author {
-  font-size: 1em;
-}
-
-.projects-card .data .title {
-  margin-top: 10px;
-  font-size: 4em;
-  margin-bottom: 15px;
-}
-
-.projects-card .data .tags {
-  display: flex;
-}
-
-.projects-card .data .tags li {
-  margin-right: 1em;
-  font-size: 1.5em;
-  border-radius: 20px;
-}
-
-.projects-card .data .tags li:hover {
-  color: #ef6461;
-}
-
-.projects-card .data .text {
-  height: 70px;
-  margin: 0;
-}
-
-.projects-card .data .button {
-  text-align: center;
-  display: block;
-}
-
-.projects-card .data span {
-  position: relative;
-}
-
-.projects-card:hover {
-  box-shadow: 0px 0px 20px #000000;
-}
-
-.contact {
-  margin-top: 15px;
-  flex-direction: column;
-}
-
-.contact-title {
-  border-bottom: 1px solid #e8e9eb;
-  padding-bottom: 1em;
-}
-
-.contact .half {
-  border: none;
-}
-
-.contact label {
-  text-transform: uppercase;
-  font-weight: 200;
-  display: inline-block;
-  width: 10%;
-  margin: 1.5em 0em;
-}
-
-.contact input {
-  border: none;
-  border-bottom: 2px solid #e8e9eb;
-  width: 100%;
-}
-
-.contact input:focus {
-  transition: .2s;
-  outline: none;
-  border-bottom: 3px solid #000000;
-}
-
-.contact textarea {
-  width: 100%;
-  height: 130px;
-  outline: none;
-}
-
-.contact textarea:focus {
-  transition: .2s;
-  outline: none;
-  border: 1px solid #000000;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact .reveal {
-  margin-top: 2em;
-  cursor: pointer;
-  text-align: center;
-  display: inline-block;
-  background: #ef6461;
-  height: 3em;
-  position: relative;
-  width: 10em;
-  overflow: hidden;
-}
-
-.contact .reveal p {
-  color: white;
-}
-
-.contact .reveal:hover .send {
-  transition: .25s;
-  transform: translateY(-110px);
-}
-
-.contact .send {
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: -30px;
-  font-weight: 500;
-  font-size: 1.3em;
-  background: #ef6461;
-  width: 5em;
-  height: 110px;
-  padding-top: .3em;
-  text-align: center;
-}
-
-.contact .send a {
-  color: white;
-  display: block;
-  margin-bottom: 30px;
-}
-
-.contact .send .plane {
-  display: block;
-}
-
-.contact .send .plane i {
-  color: white;
-}
-
-.contact:hover .contact-title {
-  transition: .5s;
-  border-bottom: 2px solid #ef6461;
-}
-
-#footer {
-  margin-top: 4em;
-  padding: 2em;
-  min-height: 165px;
-  text-align: center;
-  background: #000000;
-  color: white;
-}
-
-#footer ul {
-  display: flex;
-}
-
-#footer ul li {
-  font-size: 1.2em;
-  margin: 1.2em;
-}
-
-#footer ul li:hover {
-  transition: .5s;
-  color: #ef6461;
-}
-
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    padding: 0% 5%;
-  }
-  .about_me {
-    margin-top: 0;
+  &-1{
+    margin-right: 1%;
     border: none;
   }
-  .about_me .skills {
-    flex-wrap: wrap;
-  }
-  .about_me .skills li {
-    font-size: 2.5em;
-    margin: .5em;
-  }
-  .wrapper-2 .data {
-    transform: translateY(-200px);
+   &-2{
+    margin-left: 1%;
   }
 }
 
-@media screen and (max-width: 700px) {
-  .half {
+.wrapper-2{
+  padding: 2em;
+  position: relative;
+   &:hover{
+     .data{
+       transition: .2s;
+      // top: 100px;
+       transform: translateY(-200px);
+     }
+       }
+  overflow: hidden;
+}
+
+.projects{
+ margin: 3em 0em;
+  &-title{
+    h1{
+        font-size: 4em;
+      font-weight: 900;
+    }
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     &_small{
+        display: none;
+      }
+ 
+  }
+  &-card{
+    a{
+      color: white;
+    }
+    
+    background: $black;
+    background-image:url("https://ucarecdn.com/0272b1b6-cf51-4bfe-a1a8-c8098cbe8831/pattern.png");
+    color: white;
+    background-size: cover;
+    transition: .5s;
+    height: 400px;
+    .header{
+      position: absolute;
+      top: 0;
+      margin-top: 20px;
+    }
+     .data{
+        position: relative;
+        top: 250px;
+       height: 330px;
+     .author {
+      font-size: 1em;
+    }
+     .title {
+        margin-top: 10px;
+        font-size: 4em;
+        margin-bottom: 15px;
+      }
+     .tags{
+       display: flex;
+       li{
+         margin-right: 1em;
+         font-size: 1.5em;
+         border-radius: 20px;
+         &:hover{
+           color: $red;
+         }
+          }
+       }
+       
+     .text {
+        height: 70px;
+        margin: 0;
+      }
+       .button{
+         text-align: center;
+         display: block;
+       }
+       span{
+         position: relative;
+       }
+      
+    }
+    &:hover{
+         box-shadow: 0px 0px 20px $black-black;
+    }
+  }
+  
+}
+
+//contact----------------------------------
+
+.contact{
+  &-title{
+    border-bottom: 1px solid $grey;
+    padding-bottom: 1em;
+  }
+  .half{
+   border: none;
+   
+  }
+  margin-top: 15px;
+  flex-direction: column;
+  label{
+    text-transform: uppercase;
+    font-weight: 200;
+    display:inline-block;
+    width:10%;
+    margin: 1.5em 0em;
+  }
+  input{
+    border: none;
+    border-bottom: 2px solid $grey;
+    width: 100%;
+    &:focus
+    {
+      transition: .2s;
+      outline: none;
+      border-bottom: 3px solid $black-black;  
+    }
+   
+  }
+  
+  textarea{
+    width: 100%;
+    height: 130px;
+    outline: none;
+     &:focus
+    {
+      transition: .2s;
+      outline: none;
+      border: 1px solid $black-black;
+      box-shadow: 0px 0px 5px rgba($black-black,.1);
+    }
+    
+  }
+     .reveal{
+     margin-top: 2em;
+     cursor: pointer;
+     text-align: center;
+     display:inline-block;
+     background: $red;
+     height: 3em;
+     position: relative;
+     width: 10em;
+     overflow: hidden;
+       p{
+         color: white;
+       }
+      &:hover{
+        .send{
+            transition: .25s;
+            transform: translateY(-110px);
+        }
+       }
+    }
+  .send{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: -30px;
+    font-weight: 500;
+    font-size: 1.3em;
+    background: $red;
+    width: 5em;
+    height: 110px;
+    padding-top: .3em;
+    text-align: center;
+    a{
+      color: white;
+      display: block;
+      margin-bottom: 30px;
+    }
+    .plane{
+      display: block;
+      i{color: white;}
+    }
+    
+  }
+
+  &:hover{
+     .contact-title{
+       transition: .5s;
+    border-bottom: 2px solid $red;
+  }
+  }
+}
+
+//footer-----------------------------------------
+#footer{
+  margin-top: 4em;
+  padding: 2em;
+ min-height: 165px;
+  text-align: center;
+    background: $black-black;
+    color: white;
+  ul{
+    display: flex;
+    li{
+      font-size:1.2em;
+      margin: 1.2em;
+      &:hover{
+        transition: .5s;
+        color: $red;
+      }
+    }
+  }
+}
+
+
+//responsive-----------------------------------------
+//ipad pro and down
+@media screen and (max-width: 1024px){
+  .wrapper{
+    padding: 0% 5%;
+  }
+ .about_me{
+    margin-top:0;
+    border: none;
+    .skills{
+      flex-wrap: wrap;
+      li{
+        font-size:2.5em;
+        margin: .5em;
+      }
+    }
+  }
+  
+  
+  .wrapper-2{//for projects card
+     .data{
+       transform: translateY(-200px);
+     }
+}
+  
+  
+}
+
+@media screen and (max-width: 700px){
+  .half{
     float: none;
     width: 100%;
     padding: 0 1em;
     border-radius: 0;
+    &-1{
+      margin-right: 0;
+    }
+       &-2{
+      margin-left: 0;
+    }
   }
-  .half-1 {
-    margin-right: 0;
+  
+  .heading{
+  //  overflow-x: hidden; not working idk why will figure out later
+    
+    &-menu{
+      display: none;
+     position: relative;
+      top:-4.5em;
+    }
+    
+    .mobile-menu{
+      cursor: pointer;
+      margin-right: 0;
+       position: relative;
+      transition: .5s;
+      display: inline-block;
+      &_exit{
+         position: relative;
+         top:-3.2em;
+         margin-right: 0;
+        display:  inline-block;
+         transition: .5s;
+        transform: translateX(999px);
+      }
+    }
+    
+    #menu:checked ~ .mobile-menu{
+        transform: translateX(-999px);
+       
+    }
+    
+     #menu:checked ~ .mobile-menu_exit{
+        transform: translateX(0px);
+    }
+    
+     #menu:checked ~ .heading-menu{
+        display: flex;
+       text-align: center;
+    }
+    
+    
+    .close{
+      transform: translateX(350px);
+    }
+    
+    
+  &-logo{
+    font-size: 8em;//changed from 10em
+  }  
+  &-menu{
+   flex-direction: column;
+   justify-content: center;
+    li{
+      margin: 1em;
+      a{
+        font-size: 2em;
+        transition: .5s;
+        color: white;
+        &:hover{
+          color: $red;
+        }
+       
+      }
+    }
   }
-  .half-2 {
-    margin-left: 0;
-  }
-  .heading-menu {
-    display: none;
-    position: relative;
-    top: -4.5em;
-  }
-  .heading .mobile-menu {
-    cursor: pointer;
-    margin-right: 0;
-    position: relative;
-    transition: .5s;
-    display: inline-block;
-  }
-  .heading .mobile-menu_exit {
-    position: relative;
-    top: -3.2em;
-    margin-right: 0;
-    display: inline-block;
-    transition: .5s;
-    transform: translateX(999px);
-  }
-  .heading #menu:checked~.mobile-menu {
-    transform: translateX(-999px);
-  }
-  .heading #menu:checked~.mobile-menu_exit {
-    transform: translateX(0px);
-  }
-  .heading #menu:checked~.heading-menu {
-    display: flex;
-    text-align: center;
-  }
-  .heading .close {
-    transform: translateX(350px);
-  }
-  .heading-logo {
-    font-size: 8em;
-  }
-  .heading-menu {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .heading-menu li {
-    margin: 1em;
-  }
-  .heading-menu li a {
-    font-size: 2em;
-    transition: .5s;
-    color: white;
-  }
-  .heading-menu li a:hover {
-    color: #ef6461;
-  }
-  .about_me {
-    margin-top: 0;
+}
+
+  .about_me{
+    margin-top:0;
     border: none;
+    .skills{
+      flex-wrap: wrap;
+      li{
+        font-size:2.5em;
+        margin: .5em;
+      }
+    }
   }
-  .about_me .skills {
-    flex-wrap: wrap;
-  }
-  .about_me .skills li {
-    font-size: 2.5em;
-    margin: .5em;
-  }
-  .projects {
-    display: flex;
+  
+  .projects{
+    
+        display: flex;
     flex-direction: column-reverse;
+    &-title{
+      justify-content: flex-start;
+      height: 100%;
+      &_small{
+        display: block;
+        text-align: center;
+        padding-bottom: .5em;
+        margin-bottom: 1em;
+        border-bottom: 1px solid $grey;
+        margin-right: .8em;
+        margin-left: .8em;
+      }
+      &_large{
+        display: none;
+      }
+    }
   }
-  .projects-title {
-    justify-content: flex-start;
-    height: 100%;
+  
+  .wrapper-2{//for projects card
+     .data{
+       transform: translateY(-200px);
+     }
+}
+  
+  .contact{
+    &-title{
+      text-align: center;
+    }
+    .submit{
+      text-align: center;
+    }
   }
-  .projects-title_small {
-    display: block;
-    text-align: center;
-    padding-bottom: .5em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid #e8e9eb;
-    margin-right: .8em;
-    margin-left: .8em;
-  }
-  .projects-title_large {
-    display: none;
-  }
-  .wrapper-2 .data {
-    transform: translateY(-200px);
-  }
-  .contact-title {
-    text-align: center;
-  }
-  .contact .submit {
-    text-align: center;
-  }
-  footer {
+
+  footer{
     display: flex;
     flex-direction: column;
+    .heading-menu{
+     position: static;
+      flex-direction: row;
+    }
   }
-  footer .heading-menu {
-    position: static;
-    flex-direction: row;
-  }
+  
+  
 }
